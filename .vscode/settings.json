@@ -1,5 +1,8 @@
 {
     "yaml.schemas": {
         "https://json.schemastore.org/github-workflow.json": "file:///d%3A/Pepe/WebDesign/xampp/htdocs/jofaval.github.io/.github/workflows/deploy.yaml"
-    }
+    },
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
 }
