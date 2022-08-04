@@ -2,15 +2,15 @@
 
 # dependencies
 *node_modules*
-app/.pnp
+.pnp
 .pnp.js
 
 # testing
-app/coverage
+coverage
 
 # next.js
-app/.next/
-app/out/
+.next/
+out/
 
 # production
 /build
