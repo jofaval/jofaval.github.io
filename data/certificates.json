@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Test",
+    "description": "Lorem ipsum dolor sit amet",
+    "link": "https://example.com",
+    "expirationDate": null,
+    "expeditionDate": null,
+    "id": null,
+    "organization": null
+  }
+]
