@@ -8,11 +8,11 @@ type SidebarElementType = {
 
 type SidebarElementPropsType = {} & SidebarElementType;
 
-const SidebarElement = ({
+const SidebarElement: React.FC<SidebarElementPropsType> = ({
   name,
   to,
   icon = undefined,
-}: SidebarElementPropsType) => {
+}) => (
   <div className="sidebar-element__container">
     <div className="sidebar-element">
       {icon && (
@@ -28,8 +28,8 @@ const SidebarElement = ({
         {name}
       </a>
     </div>
-  </div>;
-};
+  </div>
+);
 
 const initialSidebarElements: SidebarElementType[] = [
   {
@@ -51,7 +51,7 @@ const SidebarHook = (): SidebarHookType => {
   const [selectedSidebarElementsIds, setSelectedSidebarElementsIds] = useState<
     Number[]
   >([]);
-  const selectedSidebarElements = useMemo<Number[]>(
+  const selectedSidebarElements = useMemo<SidebarElementType[]>(
     () =>
       sidebarElements.filter((_, index: number) =>
         selectedSidebarElementsIds.includes(index)
@@ -62,9 +62,9 @@ const SidebarHook = (): SidebarHookType => {
     () => (sidebarIndex: number) => {
       let newSelectedSidebarElementsIds = [...selectedSidebarElementsIds];
 
-      if (sidebarElements.includes(sidebarIndex)) {
+      if (sidebarElements?.[sidebarIndex]) {
         newSelectedSidebarElementsIds = newSelectedSidebarElementsIds.filter(
-          (value: number) => value !== sidebarIndex
+          (_, index: number) => index !== sidebarIndex
         );
       } else {
         newSelectedSidebarElementsIds.push(sidebarIndex);
@@ -82,7 +82,7 @@ const SidebarHook = (): SidebarHookType => {
   };
 };
 
-const Sidebar = (): React.FC => {
+const Sidebar: React.FC = () => {
   const { sidebarElements, selectedSidebarElements, onToggleItem } =
     SidebarHook();
 
