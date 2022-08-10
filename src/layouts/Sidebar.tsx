@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useMemo, useState } from "react";
 
 type SidebarElementType = {
@@ -17,7 +18,7 @@ const SidebarElement: React.FC<SidebarElementPropsType> = ({
     <div className="sidebar-element">
       {icon && (
         <span className="sidebar-element__icon__container">
-          <img
+          <Image
             src={icon}
             alt={`Icon for ${name}`}
             className="sidebar-element__icon"
