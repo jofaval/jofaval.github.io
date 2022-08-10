@@ -73,7 +73,7 @@ const SidebarHook = (): SidebarHookType => {
 
       setSelectedSidebarElementsIds(newSelectedSidebarElementsIds);
     },
-    [setSelectedSidebarElementsIds]
+    [selectedSidebarElementsIds, sidebarElements]
   );
 
   return {
