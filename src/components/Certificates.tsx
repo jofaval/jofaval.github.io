@@ -1,7 +1,7 @@
 // Vendors
 import React, { useMemo } from "react";
 // Data
-import certificatesData from "../../data/certificates.json";
+import certificatesData from "../data/certificates.json";
 
 type CertificateType = {
   title: string;
@@ -32,6 +32,7 @@ const Certificates: React.FC<{
 
   return (
     <div className="certificates__container">
+      <div className="certificates__title">Certificates</div>
       <div className="certificates">
         {preparedCertificates && preparedCertificates.map(renderCertificate)}
       </div>
