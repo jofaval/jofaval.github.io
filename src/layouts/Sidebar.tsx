@@ -1,5 +1,7 @@
-import Image from "next/image";
+// Vendors
 import React, { useMemo, useState } from "react";
+// Components
+import Image from "next/image";
 
 type SidebarElementType = {
   name: string;
@@ -93,6 +95,7 @@ const Sidebar: React.FC = () => {
 
   return (
     <div className="sidebar__container">
+      <p className="sidebar__title">Sidebar</p>
       <div className="sidebar">
         <div className="siderbar__elements--selected">
           {selectedSidebarElements?.map(renderSidebarElement)}
