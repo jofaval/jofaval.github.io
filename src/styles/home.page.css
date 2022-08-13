@@ -1,0 +1,16 @@
+.home-page__container {
+  padding: 0 1rem;
+}
+
+.home-page__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-page__header>* {
+  margin: 0 0 .5rem;
+}
+
+.home-page__content {}
