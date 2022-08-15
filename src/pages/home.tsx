@@ -75,14 +75,17 @@ const HomePage: React.FC = () => {
             <h3 className="home-page__whoami__title">Who am I?</h3>
             <p className="home-page__whoami__content">
               I'm a developer, currently software engineering as my day (and
-              only) job. I've studied Computer Networks and Protocols,
-              Computer's Architecture, the State and Fundamentals of IT,
-              Software development, Web Development and, as of, recently a
-              masters in Artificial Intelligence and Big Data. My experience
-              with Python, while not necessarily being the roundest of them all,
-              it's a bit horizontal you could say. I've done personal and
-              educational projects, and I've automated workflows in a
-              profesional environment.
+              only) job.
+              <br />
+              I've studied Computer Networks and Protocols, Computer's
+              Architecture, the State and Fundamentals of IT, Software
+              development, Web Development and, as of, recently a masters in
+              Artificial Intelligence and Big Data.
+              <br />
+              My experience with Python, while not necessarily being the
+              roundest of them all, it's a bit horizontal you could say. I've
+              done personal and educational projects, and I've automated
+              workflows in a profesional environment.
             </p>
           </div>
         </main>
