@@ -28,7 +28,17 @@ const renderMainLink: (value: any, index: number) => JSX.Element = (
   index
 ) => {
   const linkProps: { [key: string]: any } = {
-    className: `link text-decoration-underline color-blue flex-initial flex span.home-page__main-link`,
+    className: [
+      "link",
+      "text-decoration-underline",
+      "color-blue",
+      "flex-initial",
+      "flex",
+      "gap-0.5",
+      "home-page__main-link",
+      "underline",
+      "text-zinc-900",
+    ].join(" "),
   };
   if (href.startsWith("http")) {
     linkProps["target"] = "_blank";
@@ -49,22 +59,30 @@ const renderMainLink: (value: any, index: number) => JSX.Element = (
 const HomeMainLinks: React.FC = () =>
   !Array.isArray(mainHeaderLinks) ? null : (
     <div className="home-page__main-links__container p-1">
-      <div className="home-page__main-links flex gap-0.5">
+      <div className="space-y-1">&nbsp;</div>
+      <div className="home-page__main-links flex justify-center gap-3">
         {mainHeaderLinks?.map(renderMainLink)}
       </div>
+      <div className="space-y-1">&nbsp;</div>
     </div>
   );
 
 const HomePage: React.FC = () => {
   return (
-    <div className="home-page__container">
+    <div className="home-page__container text-justify">
       <div className="home-page">
         <header className="home-page__header">
-          <h1 className="home-page__title text-2xl">Pepe Fabra Valverde</h1>
-          <h2 className="home-page__subtitle text-lg">Software Engineer</h2>
+          <h1 className="home-page__title text-4xl font-bold">
+            Pepe <span className="hidden md:inline-block">(José)</span> Fabra
+            Valverde
+          </h1>
+          <h2 className="home-page__subtitle text-lg">
+            <span className="text-neutral-500">(he/him/his)</span> Software
+            Engineer
+          </h2>
         </header>
-        <main className="home-page__content">
-          <p className="home-page__description">
+        <main className="home-page__content container m-auto">
+          <p className="home-page__description text-center">
             Welcome to my portfolio page, it's main focus is to describe my
             journey, experience and skillset as a web and software developer.
           </p>
@@ -72,10 +90,13 @@ const HomePage: React.FC = () => {
           <HomeMainLinks />
 
           <div className="home-page__whoami">
-            <h3 className="home-page__whoami__title">Who am I?</h3>
+            <h3 className="home-page__whoami__title text-2xl font-bold">
+              Who am I?
+            </h3>
             <p className="home-page__whoami__content">
               I'm a developer, currently software engineering as my day (and
               only) job.
+              <br />
               <br />
               I've studied Computer Networks and Protocols, Computer's
               Architecture, the State and Fundamentals of IT, Software
