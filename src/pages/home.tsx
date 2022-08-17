@@ -93,7 +93,10 @@ const HomePage: React.FC = () => {
             Engineer
           </h2>
         </header>
-        <main className="home-page__content container m-auto">
+        <main
+          className="home-page__content container m-auto"
+          style={{ hyphens: "manual" }}
+        >
           <p className="home-page__description text-center">
             Welcome to my portfolio page, it's main focus is to describe my
             journey, experience and skillset as a web and software developer.
