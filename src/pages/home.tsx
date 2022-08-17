@@ -1,8 +1,11 @@
 // Vendors
 import React from "react";
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 // Components
 import Image from "next/image";
 import Link from "next/link";
+// Styles
+import { vs2015 } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const mainHeaderLinks = [
   {
@@ -39,6 +42,7 @@ const renderMainLink: (value: any, index: number) => JSX.Element = (
       "underline",
       "text-zinc-900",
     ].join(" "),
+    title: label,
   };
   if (href.startsWith("http")) {
     linkProps["target"] = "_blank";
@@ -66,6 +70,20 @@ const HomeMainLinks: React.FC = () =>
       <div className="space-y-1">&nbsp;</div>
     </div>
   );
+
+const whoamiCode = `import { description } from '@me';
+
+const whoami = () => [
+  "I'm a developer, currently software engineering as my day (and only) job.",
+  \`I've studied \${[
+    "Computer Networks and Protocols",
+    "Computer's Architecture",
+    "the State and Fundamentals of IT",
+    "Software development",
+    "Web Development",
+  ].join(", ")} and, as of, recently a masters in Artificial Intelligence and Big Data.\`,
+].join('\\n')
+`;
 
 const HomePage: React.FC = () => {
   return (
@@ -119,6 +137,10 @@ const HomePage: React.FC = () => {
               Artificial Intelligence and Big Data.
             </p>
           </div>
+          {/* 
+          <SyntaxHighlighter language="typescript" style={vs2015}>
+            {whoamiCode}
+          </SyntaxHighlighter> */}
         </main>
       </div>
     </div>
