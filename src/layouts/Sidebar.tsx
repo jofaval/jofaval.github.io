@@ -3,6 +3,7 @@ import React, { useMemo, useState } from "react";
 // Components
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 type SidebarElementType = {
   name: string;
@@ -51,6 +52,15 @@ type SidebarHookType = {
   onToggleItem: (sidebarIndex: number) => void;
 };
 
+const sidebarStrings: { [key: string]: string | any } = {
+  "es-ES": {
+    title: "Explorador",
+  },
+  "en-EN": {
+    title: "Sidebar",
+  },
+};
+
 const SidebarHook = (): SidebarHookType => {
   const [sidebarElements] = useState<SidebarElementType[]>(
     initialSidebarElements
@@ -97,11 +107,17 @@ const Sidebar: React.FC = () => {
     <SidebarElement key={index} {...sidebar} />
   );
 
+  const { locale, locales, defaultLocale, asPath } = useRouter();
+  const currentStrings = useMemo(
+    () => (locale && locale in sidebarStrings ? sidebarStrings[locale] : {}),
+    [locale]
+  );
+
   return (
     <div className="sidebar__container w-1/3 md:w-1/5 hidden md:block h-full bg-zinc-900 text-white">
       <div className="sidebar__title__container dark:bg-zinc-900 dark:text-white p-1">
         <p className="sidebar__title text-xs ml-2 my-1 font-thin uppercase">
-          Sidebar
+          {currentStrings.title}
         </p>
       </div>
 
