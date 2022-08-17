@@ -21,7 +21,7 @@ const Page: React.FC<{ children?: React.ReactNode }> = ({ children }) => (
 
     <div className="page flex flex-col">
       <HeaderTabsList />
-      <div className="page__content p-4">{children}</div>
+      <div className="page__content p-4 h-full">{children}</div>
     </div>
   </div>
 );

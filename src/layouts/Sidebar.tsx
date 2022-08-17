@@ -98,9 +98,11 @@ const Sidebar: React.FC = () => {
   );
 
   return (
-    <div className="sidebar__container w-1/3 md:w-1/5 hidden md:block h-full">
+    <div className="sidebar__container w-1/3 md:w-1/5 hidden md:block h-full bg-zinc-900 text-white">
       <div className="sidebar__title__container dark:bg-zinc-900 dark:text-white p-1">
-        <p className="sidebar__title text-md font-bold uppercase">Sidebar</p>
+        <p className="sidebar__title text-xs ml-2 my-1 font-thin uppercase">
+          Sidebar
+        </p>
       </div>
 
       <div className="sidebar px-1">

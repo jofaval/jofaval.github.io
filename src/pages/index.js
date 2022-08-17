@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 // Styles
 import styles from "../styles/Home.module.css";
+// Pages
+import HomePage from "./home";
 
-export default function Home() {
+function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -74,3 +76,7 @@ export default function Home() {
     </div>
   );
 }
+
+// export default Home
+
+export default HomePage;
