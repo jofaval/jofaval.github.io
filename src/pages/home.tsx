@@ -76,6 +76,18 @@ const HomePage: React.FC = () => {
             Pepe <span className="hidden md:inline-block">(José)</span> Fabra
             Valverde
           </h1>
+          <Image
+            src={"/img/jofaval.jpg"}
+            alt={
+              "Profile picture of myself with some nature background behind me"
+            }
+            title={
+              "Profile picture of myself with some nature background behind me"
+            }
+            width={250}
+            height={250}
+            className="rounded-lg"
+          />
           <h2 className="home-page__subtitle text-lg">
             <span className="text-neutral-500">(he/him/his)</span> Software
             Engineer
