@@ -7,7 +7,7 @@ import HeaderTabsList from "./HeaderTabs";
 import Sidebar from "./Sidebar";
 
 const Page: React.FC<{ children?: React.ReactNode }> = ({ children }) => (
-  <div className="page__container">
+  <div className="page__container flex h-screen">
     <Head>
       <title>jofaval</title>
       <meta
@@ -17,11 +17,11 @@ const Page: React.FC<{ children?: React.ReactNode }> = ({ children }) => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <HeaderTabsList />
     <Sidebar />
 
-    <div className="page">
-      <div className="page__content">{children}</div>
+    <div className="page flex flex-col">
+      <HeaderTabsList />
+      <div className="page__content p-4">{children}</div>
     </div>
   </div>
 );

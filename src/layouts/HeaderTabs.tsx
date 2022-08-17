@@ -25,9 +25,9 @@ type HeaderTabsListPropType = {};
 
 const HeaderTabsList = ({}: HeaderTabsListPropType) => {
   return (
-    <div className="header-tabs__container">
-      <p className="header-tabs__title">Header</p>
-      <div className="header-tabs">
+    <div className="header-tabs__container container">
+      {/* <p className="header-tabs__title">Header</p> */}
+      <div className="header-tabs flex">
         {HEADER_TABS.map((props: HeaderTabType, index: number) => (
           <HeaderTab key={index} {...props} />
         ))}

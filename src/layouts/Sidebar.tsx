@@ -2,6 +2,7 @@
 import React, { useMemo, useState } from "react";
 // Components
 import Image from "next/image";
+import Link from "next/link";
 
 type SidebarElementType = {
   name: string;
@@ -18,18 +19,21 @@ const SidebarElement: React.FC<SidebarElementPropsType> = ({
 }) => (
   <div className="sidebar-element__container">
     <div className="sidebar-element">
-      {icon && (
-        <span className="sidebar-element__icon__container">
-          <Image
-            src={icon}
-            alt={`Icon for ${name}`}
-            className="sidebar-element__icon"
-          />
-        </span>
-      )}
-      <a href={to} className="sidebar-element__link">
-        {name}
-      </a>
+      <Link href={to}>
+        <a className="sidebar-element__link">
+          {icon && (
+            <span className="sidebar-element__icon__container">
+              <Image
+                src={icon}
+                alt={`Icon for ${name}`}
+                className="sidebar-element__icon"
+              />
+            </span>
+          )}
+
+          {name}
+        </a>
+      </Link>
     </div>
   </div>
 );
@@ -94,14 +98,22 @@ const Sidebar: React.FC = () => {
   );
 
   return (
-    <div className="sidebar__container">
-      <p className="sidebar__title">Sidebar</p>
-      <div className="sidebar">
-        <div className="siderbar__elements--selected">
-          {selectedSidebarElements?.map(renderSidebarElement)}
-        </div>
-        <div className="siderbar__elements">
-          {sidebarElements?.map(renderSidebarElement)}
+    <div className="sidebar__container w-1/3 md:w-1/5 hidden md:block h-full">
+      <div className="sidebar__title__container dark:bg-zinc-900 dark:text-white p-1">
+        <p className="sidebar__title text-md font-bold uppercase">Sidebar</p>
+      </div>
+
+      <div className="sidebar px-1">
+        <div className="sidebar__content dark:bg-zinc-800 h-100">
+          {selectedSidebarElements && (
+            <div className="siderbar__elements--selected">
+              {selectedSidebarElements?.map(renderSidebarElement)}
+            </div>
+          )}
+
+          <div className="siderbar__elements">
+            {sidebarElements?.map(renderSidebarElement)}
+          </div>
         </div>
       </div>
     </div>
