@@ -81,11 +81,6 @@ const HomePage: React.FC = () => {
               Architecture, the State and Fundamentals of IT, Software
               development, Web Development and, as of, recently a masters in
               Artificial Intelligence and Big Data.
-              <br />
-              My experience with Python, while not necessarily being the
-              roundest of them all, it's a bit horizontal you could say. I've
-              done personal and educational projects, and I've automated
-              workflows in a profesional environment.
             </p>
           </div>
         </main>
