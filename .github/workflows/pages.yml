@@ -82,6 +82,23 @@ jobs:
         with:
           path: ./out
 
+  # Static sFTP deployment
+  sftp-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Debugging
+        run: ls -a
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          port: ${{ secrets.FTP_PORT }}
+          local-dir: ./out/
+
   # Deployment job
   deploy:
     environment:
