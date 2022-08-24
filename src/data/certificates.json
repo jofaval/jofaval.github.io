@@ -1,11 +1,24 @@
 [
   {
-    "title": "Test",
-    "description": "Lorem ipsum dolor sit amet",
-    "link": "https://example.com",
+    "title": "Machine Learning",
+    "description": "Linear Algebra, Machine Learning Techniques, Supervised and Unsupervised Learning",
+    "link": "https://www.coursera.org/account/accomplishments/certificate/7GGF3WBGQSX4",
     "expirationDate": null,
-    "expeditionDate": null,
-    "id": null,
-    "organization": null
+    "expeditionDate": 1653850800000,
+    "id": "3622052e-520d-406a-ae04-d8f1063aabdd",
+    "organization": "Coursera (Stanford)",
+    "badge": null,
+    "icon": null
+  },
+  {
+    "title": "AWS Machine Learning Foundations",
+    "description": "Foundational concepts of Machine Learning, Artificial Intelligence and Data Science",
+    "link": "https://www.credly.com/badges/3622052e-520d-406a-ae04-d8f1063aabdd",
+    "expirationDate": null,
+    "expeditionDate": 1661204820,
+    "id": "3622052e-520d-406a-ae04-d8f1063aabdd",
+    "organization": "Amazon Web Services (AWS)",
+    "badge": null,
+    "icon": null
   }
 ]
